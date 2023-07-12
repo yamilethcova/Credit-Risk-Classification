@@ -1,43 +1,47 @@
-# Module 12 Report Template
+# Module 12 Report 
 
 ## Overview of the Analysis
 
-The purpose of evaluate this analysis is develop and predict if the loans that the dtaa contain are high risk or healthy 
+The purpose of evaluating this analysis is to develop and predict if the data's loans are high-risk or healthy. Using machine learning models where I have to process, train and evaluate the data to get proper accuracy, precision, and recall   
 
-The variables inside of the data has been labeled as 0 = 
+The variables inside of the data have been labelled as 0 = Low Risk 
+                                                       1 = High Risk
+
+The machine learning models used were:
+
+Machine Learning Model 1: Logistic Regression
+Machine Learning Model 2: Ransom over Sampler - To balance the data 
+
 ## Results
 
-Using bulleted lists, describe the balanced accuracy scores and the precision and recall scores of all machine learning models.
+Machine Learning Model 1 (Logistic Regression):
 
-* Machine Learning Model 1:
-  
-                precision    recall  f1-score   support
+Precision for label 0 (healthy loan): 1.00
+Recall for label 0: 1.00
+F1-score for label 0: 1.00
+Precision for label 1 (high-risk loan): 0.85
+Recall for label 1: 0.91
+F1-score for label 1: 0.88
 
-           0       1.00      1.00      1.00     18792
-           1       0.85      0.91      0.88       592
+For this ML Module 1, we can conclude: 
+Accuracy: 0.99
 
-    accuracy                           0.99     19384
-   macro avg       0.93      0.95      0.94     19384
-weighted avg       0.99      0.99      0.99     19384
+Machine Learning Model 2 (Ransom over Sampler)
 
+Precision for label 0 (healthy loan): 1.00
+Recall for label 0: 0.99
+F1-score for label 0: 1.00
+Precision for label 1 (high-risk loan): 0.84
+Recall for label 1: 1.00
+F1-score for label 1: 0.91
 
-
-* Machine Learning Model 2:
-  
-              precision    recall  f1-score   support
-
-           0       1.00      0.99      1.00     18792
-           1       0.84      1.00      0.91       592
-
-    accuracy                           0.99     19384
-   macro avg       0.92      1.00      0.96     19384
-weighted avg       1.00      0.99      0.99     19384
-
+For this ML Module 2: 
+Accuracy: 0.99
 
 ## Summary
 
-Summarize the results of the machine learning models, and include a recommendation on the model to use, if any. For example:
-* Which one seems to perform best? How do you know it performs best?
-* Does performance depend on the problem we are trying to solve? (For example, is it more important to predict the `1`'s, or predict the `0`'s? )
+Both ML models demonstrated strong performance in predicting high-risk, both models show a very close balance score has model 1 = 95% and Model 2 =99%, however, the data from model 1 is imbalance due to the number of the healthy loan being 17036 and unhealthy one 2500 the difference is very big, saying that is why I decide to use the Ransom over sampler to balance the data and get a realistic prediction on the model. regarding which label is better to predict I will say both, 0 and 1 so you can get properly evaluate the data and know if it balances or not and minimize the possible misclassification of a healthy or high-risk loan 
 
-If you do not recommend any of the models, please justify your reasoning.
+
+
+
